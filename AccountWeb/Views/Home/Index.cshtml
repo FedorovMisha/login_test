@@ -1,0 +1,18 @@
+﻿@model UserPresentationModel
+
+<div class="h-screen w-screen flex flex-col justify-center items-center content-center">
+    <div class="group text-gray-400 text-xl font-mono text-4xl flex flex-col items-center justify-center justify-items-stretch">
+        <div class="px-8 py-4 border-2 border-blue-600 rounded-lg mb-8 shadow-md transform hover:scale-125 w-full">
+            <h3 class="group-hover:text-gray-600 text-2xl">User Id: @Model.UserId</h3>
+        </div>
+        <div class="px-8 py-4 border-2 border-blue-600 rounded-lg mb-8 shadow-md transform hover:scale-125  w-full">
+            <h3 class="group-hover:text-gray-600 text-2xl">User Name: @Model.UserName</h3>
+        </div>
+        <div class="px-8 py-4 border-2 border-blue-600 mb-8 rounded-lg shadow-md transform hover:scale-125  w-full">
+            <h3 class="group-hover:text-gray-600 text-2xl">Registration Date: @Model.Date</h3>
+        </div>
+        @* <a asp-action="Logout" asp-controller="Account" class="px-10 py-3 bg-red-300 hover:bg-red-600 shadow-md text-xl text-white rounded-lg">Logout</a> *@
+        
+        
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿@model RegisterModel
+
+
+
+@* <form asp-action="SignIn" method="post" asp-antiforgery="true" class="container mx-auto"> *@
+    <div class="w-screen m-0 h-screen flex justify-center items-center">
+        <div class="group px-16 pt-8 pb-5 rounded-xl border-2 ring-2 ring-blue-100 shadow-md hover:shadow-xl border-blue-300 hover:border-blue-600 font-mono flex flex-col justify-center items-center">
+            <h3 class="group-hover:text-blue-600 text-center text-blue-300 text-3xl font-bold font-mono mb-4">Login</h3>
+            <img src="https://www.flaticon.com/svg/vstatic/svg/2641/2641405.svg?token=exp=1613059205~hmac=15fb4e753d4e5c2177c655d2de03cb00" alt="" class="object-cover w-32">
+            <div class="flex flex-col group">
+                <label for="" class="group-hover: text-blue-300 font-bold text-xl p-2">Email</label>
+                <div><span asp-validation-for="Email" class="text-red-500 text-xs text-center"></span></div>
+                <input type="text" class="border-blue-300 border-2 hover:border-blue-600 py-1 px-4 rounded-lg focus:outline-none
+                    focus:ring-2 focus:ring-blue-600 focus:border-blue-600 hover:shadow-md transform focus:scale-110" asp-for="Email" placeholder="Email"/>
+            </div>
+            <div class="flex flex-col group mb-6">
+                <label class="group-hover: text-blue-300 font-bold text-xl p-2">Password</label>
+                <div><span asp-validation-for="Password" class="text-red-500 text-xs text-center"></span></div>
+                <input type="text" class="border-blue-300 border-2 py-1 px-4 hover:border-blue-600 rounded-lg focus:outline-none
+                    focus:ring-2 focus:ring-blue-600 focus:border-blue-600 hover:shadow-md transform focus:scale-110" asp-for="Password" placeholder="Password"/>
+            </div>
+            <button type="submit" class="focus:outline-none rounded-lg hover:shadow-md bg-blue-300 px-10 py-2 text-white font-bold text-xl hover:bg-blue-600">Login</button>
+            <a class="text-xs text-blue-400 mt-2 hover:text-blue-600" asp-action="Index" asp-controller="Home">Back</a>
+            <div class="pt-4">
+                @* <a asp-action="GoogleLogin" asp-route-returnUrl="@(Model.ReturnUrl)"> *@
+                    <div class="w-8 shadow-sm p-1">
+                        <img src="https://www.flaticon.com/svg/vstatic/svg/281/281764.svg?token=exp=1613060747~hmac=3d11fb5351fb41951b1ac49e9242abf9" alt="" class="object-cover">
+                    </div>
+                @* </a> *@
+            </div>
+        </div>
+    </div>
+@* </form> *@
